@@ -2,6 +2,9 @@ package com.itrellis.aussie;
 
 import junit.framework.TestSuite;
 import org.junit.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 /**
@@ -11,6 +14,10 @@ public class AussieTest extends TestSuite {
 
     @Test public void testsAreWorking() {
         assertEquals(true, true);
+    }
+
+    @Test public void isOneContestant() {
+
     }
 
 }

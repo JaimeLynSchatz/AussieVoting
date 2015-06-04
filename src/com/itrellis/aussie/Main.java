@@ -3,11 +3,18 @@ package com.itrellis.aussie;
 public class Main {
 
     public static void main(String[] args) {
-	    class VoteCase {
-            public int numberOfCandidates;
-            public String candidates[numberOfCandidates];
+        class VoteCase {
+            int numberOfCandidates;
 
-            int votes[][numberOfCandidates];
+            public VoteCase(int numberOfCandidates) {
+                this.numberOfCandidates = numberOfCandidates;
+            }
+
+            // this code doesn't work yet
+
+            public String candidates[this.numberOfCandidates];
+
+            int votes[][this.numberOfCandidates];
 
             public int[][] getVotes() {
                 return votes;
@@ -26,5 +33,8 @@ public class Main {
                 this.candidates = candidates;
             }
         }
+
+        VoteCase election = new VoteCase(5);
+        election.
     }
 }

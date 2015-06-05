@@ -1,5 +1,19 @@
 package com.itrellis.aussie;
-
+/*
+ * Sample Input
+ * 1
+ *
+ * 3
+ * John Doe
+ * Jane Smith
+ * Jane Austen
+ * 1 2 3
+ * 2 1 3
+ * 2 3 1
+ * 1 2 3
+ * 3 1 2
+ *
+ */
 public class Main {
 
     public static void main(String[] args) {
@@ -10,11 +24,10 @@ public class Main {
                 this.numberOfCandidates = numberOfCandidates;
             }
 
-            // this code doesn't work yet
+            public String candidates[] = new String[this.numberOfCandidates];
 
-            public String candidates[this.numberOfCandidates];
-
-            int votes[][this.numberOfCandidates];
+            // need to find a way to set the number of rows more dynamically
+            int votes[][] = new int[5][this.numberOfCandidates];
 
             public int[][] getVotes() {
                 return votes;
@@ -34,7 +47,7 @@ public class Main {
             }
         }
 
-        VoteCase election = new VoteCase(5);
+        VoteCase election = new VoteCase(3);
         election.
     }
 }

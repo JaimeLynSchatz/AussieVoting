@@ -48,6 +48,6 @@ public class Main {
         }
 
         VoteCase election = new VoteCase(3);
-        election.
+        System.out.println(election.getVotes());
     }
 }

@@ -48,6 +48,15 @@ public class Main {
         }
 
         VoteCase election = new VoteCase(3);
+
+        int voteArray[][] = new int[5][3];
+        int i;
+        int j;
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 3; j++){
+                // now what, genius?
+            }
+        }
         System.out.println(election.getVotes());
     }
 }

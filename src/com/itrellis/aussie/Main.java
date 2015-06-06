@@ -53,11 +53,16 @@ public class Main {
         int i;
         int j;
         for (i = 0; i < 5; i++) {
-            for (j = 0; j < 3; j++){
+            for (j = 0; j < 3; j++) {
                 // now what, genius?
             }
         }
+
+        String[] candidates = new String[]{"Elizabeth Warren", "Bob Dole", "Mickey Mouse"};
+        election.setCandidates(candidates);
         System.out.println(election.getVotes());
-        System.out.println(election.getCandidates());
+        for (i = 0; i < candidates.length; i++) {
+            System.out.println(candidates[i]);
+        }
     }
 }

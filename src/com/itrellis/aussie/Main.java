@@ -58,5 +58,6 @@ public class Main {
             }
         }
         System.out.println(election.getVotes());
+        System.out.println(election.getCandidates());
     }
 }

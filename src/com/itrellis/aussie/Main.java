@@ -23,25 +23,19 @@ public class Main {
     public static void main(String[] args) {
         class Election {
 
-            int numberOfCandidates;
-
-            public Election(int numberOfCandidates) {
-                this.numberOfCandidates = numberOfCandidates;
-            }
-
-            // not sure yet, but fairly sure this isn't needed anymore
-            //
-//            public String candidates[] = new String[this.numberOfCandidates];
-//            public String[] getCandidates() { return candidates; }
-//            public void setCandidates(String[] candidates) { this.candidates = candidates; }
-
             class Candidate {
-                public Candidate(String name) {
-                    String candidateName = name;
+                public String candidateName = "";
+
+                private int voteCount = 0;
+
+                public void incrementVote() {
+                    this.voteCount++;
+                }
+
+                public int getVoteCount() {
+                    return this.voteCount;
                 }
             }
-
-            List<Candidate> Candidates = new ArrayList<>();
 
             class Vote {
                 public Vote(int numberOfCandidates) {
@@ -58,28 +52,40 @@ public class Main {
         // manually setting now
         int numberOfElections = 2;
 
-        for (int i = 0; i < numberOfElections; i++) {
-            Election election = new Election(3);
+        Election.Candidate[] candidates = new Election.Candidate[3];
 
-            int voteArray[][] = new int[5][3];
-            int j;
-            int k;
-            for (j = 0; j < 5; j++) {
-                for (k = 0; k < 3; k++) {
-                    // now what, genius?
-                }
-            }
+        String[] names = {"Bob Dole", "Elizabeth Warren", "Mickey Mouse"};
 
-            Election myElection = new Election(1);
+        // Question to ask
+        // What's the proper way to say this?
+        // for (Election.Candidate candidate : candidates, String name : names) {
+        //    candidate.candidateName = name;
+        // }
 
-            myElection.Candidates.add(new Election.Candidate("Bob Dole"));
+        // what the heck am I even doing here? Am I thinking of this as a Collection?
 
-            String[] candidates = new String[]{"Elizabeth Warren", "Bob Dole", "Mickey Mouse"};
-            election.setCandidates(candidates);
-            System.out.println(election.getVotes());
-            for (i = 0; i < candidates.length; i++) {
-                System.out.println(candidates[i]);
-            }
+//        for (int i = 0; i < names.length; i++) {
+//            candidates[i].candidateName = names[i];
+//        }
+
+        // why doesn't this work?
+        candidates[0].candidateName = "Bob Hope";
+
+        for (Election.Candidate candidate : candidates) {
+            System.out.println(candidate);
         }
+
+//        for (int i = 0; i < numberOfElections; i++) {
+//            Election election = new Election(3);
+//
+//            Election myElection = new Election(1);
+//
+//            myElection.Candidates.add("Bob Dole");
+//
+//            System.out.println(election.getVotes());
+//            for (i = 0; i < candidates.length; i++) {
+//                System.out.println(candidates[i]);
+//            }e numbers
+//        }
     }
 }

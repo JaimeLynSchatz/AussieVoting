@@ -17,10 +17,11 @@ package com.itrellis.aussie;
 public class Main {
 
     public static void main(String[] args) {
-        class VoteCase {
+        class Election {
+
             int numberOfCandidates;
 
-            public VoteCase(int numberOfCandidates) {
+            public Election(int numberOfCandidates) {
                 this.numberOfCandidates = numberOfCandidates;
             }
 
@@ -47,7 +48,13 @@ public class Main {
             }
         }
 
-        VoteCase election = new VoteCase(3);
+        // read the first line of the file here to get the numberOfElections
+        // manually setting now
+        int numberOfElections = 2;
+        for (int i = 0; i < numberOfElections; i++)
+
+
+            Election election = new Election(3);
 
         int voteArray[][] = new int[5][3];
         int i;
